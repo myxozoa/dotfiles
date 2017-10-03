@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,6 +10,12 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+DEFAULT_USER=r
+POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs time)
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -48,7 +56,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Load solarized dircolors
-source ~/.zsh/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh
+#source ~/.zsh/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -86,5 +94,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 
